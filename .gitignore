@@ -1,15 +1,12 @@
-# MacOS системные файлы
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# Временные файлы
 *.log
 *.tmp
 *.bak
 Thumbs.db
 
-# Личные заметки
 notes.md
 personal/
 
