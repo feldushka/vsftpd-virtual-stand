@@ -77,7 +77,7 @@ finally:
     4)
         echo -e "\n${RED}[!] Симуляция атаки класса regreSSHion (CVE-2024-6387)...${NC}"
         echo "Запуск генерации шума и некорректных попыток preauth..."
-
+        for i in {1..15}; do
             ssh -o ConnectTimeout=3 -o BatchMode=yes -o StrictHostKeyChecking=no fake_sftp_user_$i@"$VICTIM_IP" > /dev/null 2>&1 &
         done
 
