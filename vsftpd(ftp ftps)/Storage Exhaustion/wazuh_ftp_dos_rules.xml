@@ -1,0 +1,16 @@
+<group name="syscheck,vsftpd,dos_storage,">
+  <rule id="101000" level="0">
+    <decoded_as>syslog</decoded_as>
+    <match>df -P</match>
+    <description>Disk usage statistics collected</description>
+  </rule>
+
+  <rule id="101001" level="12">
+    <if_sid>101000</if_sid>
+    <match>90%|91%|92%|93%|94%|95%|96%|97%|98%|99%|100%</match>
+    <description>CRITICAL: Storage exhaustion imminent! Heavy anonymous upload DoS detected</description>
+    <mitre>
+      <id>T1498</id>
+    </mitre>
+  </rule>
+</group>
