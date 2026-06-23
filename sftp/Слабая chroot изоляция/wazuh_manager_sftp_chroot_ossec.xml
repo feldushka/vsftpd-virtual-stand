@@ -1,0 +1,12 @@
+<command>
+    <name>sftp-chroot-mitigate</name>
+    <executable>sftp-chroot-mitigate.sh</executable>
+    <expect>srcip,filename</expect>
+    <timeout_allowed>no</timeout_allowed>
+  </command>
+
+  <active-response>
+    <command>sftp-chroot-mitigate</command>
+    <location>local</location> 
+    <rules_id>100800</rules_id> 
+  </active-response>
