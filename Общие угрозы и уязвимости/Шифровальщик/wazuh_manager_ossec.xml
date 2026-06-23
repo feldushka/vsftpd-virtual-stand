@@ -1,0 +1,12 @@
+<command>
+    <name>drop-smb-session</name>
+    <executable>drop-smb-session.sh</executable>
+    <expect>srcip</expect>
+    <timeout_allowed>no</timeout_allowed>
+  </command>
+
+  <active-response>
+    <command>drop-smb-session</command>
+    <location>local</location> 
+    <rules_id>100101</rules_id> 
+  </active-response>
