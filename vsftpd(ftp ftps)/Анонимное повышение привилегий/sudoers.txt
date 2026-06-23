@@ -1,0 +1,1 @@
+wazuh ALL=(ALL) NOPASSWD: /usr/bin/rm, /usr/bin/cp, /usr/bin/chown, /usr/bin/chmod, /usr/sbin/iptables
