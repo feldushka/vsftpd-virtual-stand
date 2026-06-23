@@ -1,0 +1,11 @@
+<group name="syscheck,ssh,sftp,chroot_escape,">
+  <rule id="100800" level="12">
+    <if_sid>550</if_sid>
+    <field name="syscheck.path">/home/sftp_weak/jail</field>
+    <match>/bin/|/sh$|/bash$</match>
+    <description>CRITICAL: Executable binary or shell delivered inside SFTP chroot jail directory!</description>
+    <mitre>
+      <id>T1485</id>
+    </mitre>
+  </rule>
+</group>
