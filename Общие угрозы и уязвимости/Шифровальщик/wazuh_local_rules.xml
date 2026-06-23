@@ -1,0 +1,16 @@
+<group name="syscheck,ransomware,">
+  <rule id="100100" level="3">
+    <if_sid>550, 554</if_sid>
+    <field name="syscheck.path">/home/vsftpd/smb_share</field>
+    <match>.locked$|.crypt$</match>
+    <description>Wazuh FIM: Detected file with ransomware extension (.locked/.crypt) in Samba share</description>
+  </rule>
+
+  <rule id="100101" level="12" frequency="5" timeframe="10">
+    <if_matched_sid>100100</if_matched_sid>
+    <description>CRITICAL: Ransomware mass file encryption activity detected on Samba share!</description>
+    <mitre>
+      <id>T1486</id>
+    </mitre>
+  </rule>
+</group>
