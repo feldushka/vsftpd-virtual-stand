@@ -1,0 +1,34 @@
+<group name="syscheck,authentication,bruteforce,">
+  <rule id="100210" level="12" frequency="6" timeframe="30">
+    <if_sid>5760</if_sid>
+    <description>CRITICAL: Brute-force attack detected specifically on SAMBA service!</description>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+
+  <rule id="100211" level="12" frequency="6" timeframe="30">
+    <if_sid>5716</if_sid>
+    <description>CRITICAL: Brute-force attack detected specifically on SFTP service!</description>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+
+  <rule id="100212" level="12" frequency="6" timeframe="30">
+    <if_group>vsftpd</if_group>
+    <description>CRITICAL: Brute-force attack detected specifically on FTP (vsftpd) service!</description>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+
+  <rule id="100213" level="12" frequency="6" timeframe="30">
+    <category>web-log</category>
+    <status>401</status>
+    <description>CRITICAL: Brute-force attack detected specifically on WebDAV service!</description>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+</group>
