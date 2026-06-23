@@ -1,2 +1,0 @@
-Необходимо добавить строчку
-wazuh ALL=(ALL) NOPASSWD: /usr/sbin/iptables
