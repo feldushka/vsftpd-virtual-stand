@@ -1,0 +1,16 @@
+<group name="syscheck,dos,slow_dos,">
+  <rule id="100500" level="0">
+    <decoded_as>syslog</decoded_as>
+    <match>netstat listening ports</match>
+    <description>System netstat metrics gathered</description>
+  </rule>
+
+  <rule id="100501" level="12" frequency="35" timeframe="15">
+    <if_sid>100500</if_sid>
+    <match>:80 |:443 </match>
+    <description>CRITICAL: Slow HTTP Denial of Service attack detected on WebDAV!</description>
+    <mitre>
+      <id>T1498.001</id>
+    </mitre>
+  </rule>
+</group>
