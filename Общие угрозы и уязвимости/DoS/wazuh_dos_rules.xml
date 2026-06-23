@@ -1,0 +1,43 @@
+<group name="syscheck,dos,connection_exhaustion,">
+  <rule id="100300" level="0">
+    <decoded_as>syslog</decoded_as>
+    <match>netstat listening ports</match>
+    <description>System netstat metrics gathered</description>
+  </rule>
+
+  <rule id="100310" level="12" frequency="40" timeframe="10">
+    <if_sid>100300</if_sid>
+    <match>:445 </match>
+    <description>CRITICAL: Denial of Service (Connection Exhaustion) detected on SAMBA service!</description>
+    <mitre>
+      <id>T1498.001</id>
+    </mitre>
+  </rule>
+
+  <rule id="100311" level="12" frequency="40" timeframe="10">
+    <if_sid>100300</if_sid>
+    <match>:22 </match>
+    <description>CRITICAL: Denial of Service (Connection Exhaustion) detected on SFTP service!</description>
+    <mitre>
+      <id>T1498.001</id>
+    </mitre>
+  </rule>
+
+  <rule id="100312" level="12" frequency="40" timeframe="10">
+    <if_sid>100300</if_sid>
+    <match>:21 </match>
+    <description>CRITICAL: Denial of Service (Connection Exhaustion) detected on FTP (vsftpd) service!</description>
+    <mitre>
+      <id>T1498.001</id>
+    </mitre>
+  </rule>
+
+  <rule id="100313" level="12" frequency="50" timeframe="10">
+    <if_sid>100300</if_sid>
+    <match>:80 |:443 </match>
+    <description>CRITICAL: Denial of Service (Connection Exhaustion) detected on WebDAV service!</description>
+    <mitre>
+      <id>T1498.001</id>
+    </mitre>
+  </rule>
+</group>
