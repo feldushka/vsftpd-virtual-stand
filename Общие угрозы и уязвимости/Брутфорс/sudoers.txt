@@ -1,0 +1,2 @@
+Необходимо добавить строчку на машине с агентом
+wazuh ALL=(ALL) NOPASSWD: /usr/sbin/iptables
