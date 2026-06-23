@@ -1,0 +1,10 @@
+<group name="syscheck,samba,dac_compromise,">
+  <rule id="100700" level="12">
+    <if_sid>550, 554</if_sid>
+    <field name="syscheck.path">/etc/samba/smb.conf</field>
+    <description>CRITICAL: Unauthorized modification or DAC permissions change on critical configuration file /etc/samba/smb.conf!</description>
+    <mitre>
+      <id>T1068</id>
+    </mitre>
+  </rule>
+</group>
