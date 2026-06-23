@@ -1,0 +1,13 @@
+<command>
+    <name>dos-port-block</name>
+    <executable>dos-port-block.sh</executable>
+    <expect>srcip</expect>
+    <timeout_allowed>yes</timeout_allowed>
+  </command>
+
+  <active-response>
+    <command>dos-port-block</command>
+    <location>local</location> 
+    <rules_id>100310,100311,100312,100313</rules_id> 
+    <timeout>900</timeout>
+  </active-response>
