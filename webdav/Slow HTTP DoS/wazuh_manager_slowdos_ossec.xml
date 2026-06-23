@@ -1,0 +1,13 @@
+<command>
+    <name>slowdos-block</name>
+    <executable>slowdos-block.sh</executable>
+    <expect>srcip</expect>
+    <timeout_allowed>yes</timeout_allowed>
+  </command>
+
+  <active-response>
+    <command>slowdos-block</command>
+    <location>local</location> 
+    <rules_id>100501</rules_id> 
+    <timeout>600</timeout>
+  </active-response>
