@@ -1,0 +1,1 @@
+wazuh ALL=(ALL) NOPASSWD: /usr/bin/rm, /usr/bin/pkill, /usr/sbin/iptables
