@@ -1,0 +1,12 @@
+<command>
+    <name>samba-dac-mitigate</name>
+    <executable>samba-dac-mitigate.sh</executable>
+    <expect>filename</expect>
+    <timeout_allowed>no</timeout_allowed>
+  </command>
+
+  <active-response>
+    <command>samba-dac-mitigate</command>
+    <location>local</location> 
+    <rules_id>100700</rules_id> 
+  </active-response>
