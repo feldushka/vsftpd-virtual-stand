@@ -1,0 +1,13 @@
+<command>
+    <name>service-port-block</name>
+    <executable>service-port-block.sh</executable>
+    <expect>srcip</expect>
+    <timeout_allowed>yes</timeout_allowed>
+  </command>
+
+  <active-response>
+    <command>service-port-block</command>
+    <location>local</location> 
+    <rules_id>100210,100211,100212,100213</rules_id> 
+    <timeout>600</timeout>
+  </active-response>
