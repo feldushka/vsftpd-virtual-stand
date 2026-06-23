@@ -1,0 +1,16 @@
+<group name="syscheck,samba,dos_disk,">
+  <rule id="100600" level="0">
+    <decoded_as>syslog</decoded_as>
+    <match>df -P</match>
+    <description>Disk usage metrics gathered</description>
+  </rule>
+
+  <rule id="100601" level="12">
+    <if_sid>100600</if_sid>
+    <match>90%|91%|92%|93%|94%|95%|96%|97%|98%|99%|100%</match>
+    <description>CRITICAL: High disk space usage detected! Storage exhaustion attack in progress</description>
+    <mitre>
+      <id>T1498</id>
+    </mitre>
+  </rule>
+</group>
