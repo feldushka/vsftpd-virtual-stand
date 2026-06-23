@@ -1,0 +1,2 @@
+Надо добавить строчку в sudoers на машине с агентом
+wazuh ALL=(ALL) NOPASSWD: /usr/bin/rm, /usr/sbin/iptables
